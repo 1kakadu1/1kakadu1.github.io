@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <title>SportsHold</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <link rel="shortcut icon" href="./icon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/flex.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="list-add animated slideInRight">
+        <div class="id_prod">
+          <div class="empt">Корзина пуста.</div>
+          <ul class="li-add"></ul>
+          <button class="btn-list-add form-view">оформить заказ</button>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light" id="nav-top"><a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul style="margin-left: -2vw;">
+              <li class="nav-item"><a href="#">Support</a></li>
+              <li class="nav-item"> <a href="#">Delivery</a></li>
+              <li class="nav-item"> <a href="#">Legal</a></li>
+              <li class="nav-item"><a href="#">About Us</a></li>
+            </ul>
+            <ul>
+              <li class="nav-item"><a href="#" id="cart">
+                   <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="21px" height="20px">
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M15.947,6.000 L15.947,5.000 C15.947,2.243 13.721,0.000 10.986,0.000 C8.251,0.000 6.025,2.243 6.025,5.000 L6.025,6.000 L0.978,6.000 L2.136,20.000 L19.836,20.000 L20.994,6.000 L15.947,6.000 ZM8.010,5.000 C8.010,3.346 9.345,2.000 10.986,2.000 C12.627,2.000 13.963,3.346 13.963,5.000 L13.963,6.000 L8.010,6.000 L8.010,5.000 ZM9.002,11.000 L5.033,11.000 L5.033,9.000 L9.002,9.000 L9.002,11.000 ZM16.939,11.000 L12.970,11.000 L12.970,9.000 L16.939,9.000 L16.939,11.000 Z"/>
+</svg>
+                  <div class="full-price">$ 0</div><span class="poduct-count">0 Items</span></a></li>
+              <li class="nav-item active"> <a href="#">Login</a></li>
+              <li class="nav-item active"> <a href="#">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light" id="nav-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-lg-3 main_flex__nowrap flex__align-items_center">
+              <div class="logo"><img src="./img/logo.png"></div>
+            </div>
+            <div class="col-9 d-sm-none d-md-none d-none col-lg-9 main_flex__nowrap flex__jcontent_end d-lg-flex">
+              <ul style="margin-right: -4vw;z-index: 4;">
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Men</a></li>
+                <li> <a href="#">Women</a></li>
+                <li> <a href="#">Children</a></li>
+                <li> <a href="#">Baby       </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="modal">
+      <div class="container">
+        <div class="wrap-form">
+          <div class="close d-lg-none d-md-none">X</div>
+          <div class="contact-info">
+            <div class="tel">
+              <h3>Вы можете нам позвонить:</h3>
+              <p>+30000000000000000</p>
+              <p>+30000000000000000</p>
+            </div>
+            <div class="logo-inf logo"><img class="phone" src="./img/logo.png" alt="logo"></div>
+          </div>
+          <form action="#">
+            <div class="row">
+              <div class="col-12 col-md-6 col-sm-12 col-lg-6 use-info">
+                <label for="name">Ваше имя</label>
+                <input class="form-control" type="text" name="name" id="name" onclick="$(this).css('border-color','#ccc')">
+                <label for="email">Ваш Email</label>
+                <input class="form-control" type="email" name="email" id="email" onclick="$(this).css('border-color','#ccc')">
+                <label for="phone">Ваш телефон</label>
+                <input class="form-control" type="tel" name="tel" id="phone" onclick="$(this).css('border-color','#ccc')">
+              </div>
+              <div class="col-12 col-md-6 col-sm-12 col-lg-6">
+                <label for="msg">Сообщение(.....)</label>
+                <textarea class="txt" rows="8" cols="45" name="text" id="msg"></textarea>
+              </div>
+            </div>
+            <div class="hideWar">Проверьте корзину, перед отправкой формы.</div>
+            <button class="btn" type="submit" name="btn" value="" id="send">Отправить</button>
+            <div id="error-msg">
+              <div class="prod-send"></div>
+              <div></div><span></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="fade" id="banner">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-7 col-lg-7 col-md-7 d-none d-sm-none d-xl-block d-md-block d-lg-block">
+            <div class="wrap-z"><img src="./img/ked.png"></div>
+          </div>
+          <div class="col-12 col-lg-5 col-md-5 col-sm-12">
+            <div class="banner-box__content"><span>From $80.00</span>
+              <h1>Nike Air Max</h1>
+              <h2>50 Variants</h2>
+              <p>
+                Since this is our favorite sneaker, we’re bringing you<br/> 50 variants to suit everyone’s needs.</p><a class="scrollto" href="#prodScroll">
+                <button>BROWSE VARIANTS</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wow fadeInUp" id="news">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-12 col-md-12"><a class="img-left__a" href="#"><img src="./img/Kyrie.png"></a></div>
+          <div class="col-12 col-lg-6 col-md-12 col-md-12"><a class="img-top__a" href="#"><img src="./img/New Arrivals.png"></a>
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 padding-l_r"><a class="img-bottom__1__a" href="#"><img src="./img/Athletes.png"></a></div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6"><a class="img-bottom__2__a" href="#"><img src="./img/Premium.png"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wow fadeInUp" id="product">
+      <div class="container" id="prodScroll">
+        <div class="tab-menu">
+          <div class="tab-menu__prod">new</div>
+          <div class="tab-menu__prod">pupular</div>
+          <div class="tab-menu__prod">top</div>
+        </div>
+        <div class="prod-link">
+          <div class="row tab-prod fade">
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$55.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p7.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378271
+                          <button class="btn-list-add add" id="1">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$60.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p5.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378272
+                          <button class="btn-list-add add" id="2">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p3.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378273
+                          <button class="btn-list-add add" id="3">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p4.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378274
+                          <button class="btn-list-add add" id="4">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p5.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378275
+                          <button class="btn-list-add add" id="5">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p6.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378276
+                          <button class="btn-list-add add" id="6">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p7.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378277
+                          <button class="btn-list-add add" id="7">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p8.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378278
+                          <button class="btn-list-add add" id="8">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+          </div>
+          <div class="row tab-prod fade">
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$415.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p7.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378279
+                          <button class="btn-list-add add" id="9">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p5.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378211
+                          <button class="btn-list-add add" id="10">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p3.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378221
+                          <button class="btn-list-add add" id="11">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p4.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378231
+                          <button class="btn-list-add add" id="12">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p5.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378241
+                          <button class="btn-list-add add" id="13">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p6.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378251
+                          <button class="btn-list-add add" id="14">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p7.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378261
+                          <button class="btn-list-add add" id="15">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p8.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378271
+                          <button class="btn-list-add add" id="16">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+          </div>
+          <div class="row tab-prod fade">
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p7.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378281
+                          <button class="btn-list-add add" id="17">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p5.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378291
+                          <button class="btn-list-add add" id="18">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p3.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378171
+                          <button class="btn-list-add add" id="19">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p4.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378271
+                          <button class="btn-list-add add" id="20">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p5.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378371
+                          <button class="btn-list-add add" id="21">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p>$60.00</p>
+                        </div>
+                        <div class="sel">-25%</div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p6.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378471
+                          <button class="btn-list-add add" id="22">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p7.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378571
+                          <button class="btn-list-add add" id="23">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+                <div class="col-6 col-lg-3 col-md-6 col-sm-6"><a class="product" href="#">
+                    <div class="wrap">
+                      <div class="wrap-price">
+                        <div class="price">
+                          <p class="price-prod">$45.00</p>
+                          <p></p>
+                        </div>
+                        <div class="sel"></div>
+                      </div>
+                      <div class="prod-img"><img class="prod-img__c" src="./img/p8.png"></div>
+                      <div class="info">
+                        <p>men</p><span class="title-prod">Converse Breakpoint&lt;br&gt; Suede Blue</span>
+                        <p class="cod">#16378671
+                          <button class="btn-list-add add" id="24">+</button>
+                        </p>
+                      </div>
+                    </div></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="top-brand">
+      <div class="container">
+        <div class="row">
+          <div class="col-2 col-lg-2 col-md-4"><img src="./img/w1.png"></div>
+          <div class="col-2 col-lg-2 col-md-4"><img src="./img/w2.png"></div>
+          <div class="col-2 col-lg-2 col-md-4"><img src="./img/w3.png"></div>
+          <div class="col-2 col-lg-2 col-md-4 mg-top"><img src="./img/w4.png"></div>
+          <div class="col-2 col-lg-2 col-md-4 mg-top"><img src="./img/w5.png"></div>
+          <div class="col-2 col-lg-2 col-md-4 mg-top"><img src="./img/w6.png"></div>
+        </div>
+      </div>
+    </section>
+    <section id="com-slider">
+      <div class="overlay">
+        <div class="container">
+          <div class="row justify-content-center">
+                <div class="col-2 com-p fade"><img src="./img/sl1.png">
+                  <p class="name">Ondrew Ferraccioli</p>
+                  <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <div class="comments hide">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</div>
+                </div>
+                <div class="col-2 com-p fade"><img src="./img/sl1.png">
+                  <p class="name">Ondrew Ferraccioli</p>
+                  <div class="stars"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <div class="comments hide">“32Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</div>
+                </div>
+                <div class="col-2 com-p fade"><img src="./img/sl1.png">
+                  <p class="name">Ondrew Ferraccioli</p>
+                  <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                  <div class="comments hide">“11Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</div>
+                </div>
+          </div>
+          <div class="col-xl-12 msg slideInLeftMy"> </div>
+        </div>
+      </div>
+    </section>
+    <section id="last-news">
+      <div class="container">
+        <div class="title__last-news">LATEST NEWS</div>
+        <div class="row">
+              <div class="col-4 col-lg-4 col-md-6 col-sm-6"><a class="post" href="#"><img src="./img/news1.png">
+                  <div class="post-info"><span class="date">date DEC 27, 2017</span>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                    <div class="comment"> <i class="fas fa-comments"></i><span>24 comments</span></div>
+                  </div></a></div>
+              <div class="col-4 col-lg-4 col-md-6 col-sm-6"><a class="post" href="#"><img src="./img/news2.png">
+                  <div class="post-info"><span class="date">date DEC 27, 2017</span>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                    <div class="comment"> <i class="fas fa-comments"></i><span>24 comments</span></div>
+                  </div></a></div>
+              <div class="col-4 col-lg-4 col-md-6 col-sm-6"><a class="post" href="#"><img src="./img/news3.png">
+                  <div class="post-info"><span class="date">date DEC 27, 2017</span>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+                    <div class="comment"> <i class="fas fa-comments"></i><span>24 comments</span></div>
+                  </div></a></div>
+        </div>
+      </div>
+    </section>
+    <section id="info-bloks">
+      <div class="block-send__msg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-sm-12 col-lg-7 wrap-cen"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ >
+<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+ d="M-0.000,0.000 L-0.000,42.000 L60.000,42.000 L60.000,0.000 L-0.000,0.000 ZM53.989,9.694 L41.269,21.004 L53.989,32.314 L53.989,36.004 L49.099,36.004 L36.769,25.024 L31.999,29.253 C31.429,29.734 30.709,30.004 29.989,30.004 C29.299,30.004 28.579,29.734 28.009,29.253 L23.239,25.024 L10.879,36.004 L5.989,36.004 L5.989,32.314 L18.739,21.004 L5.989,9.694 L5.989,6.004 L10.909,6.004 L29.989,22.984 L49.099,6.004 L53.989,6.004 L53.989,9.694 Z"/>
+</svg>
+              <div class="title-msg">
+                <h1>Looking for help?</h1>
+                <p>Have any questions or need help with order? Let us know!</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-sm-12 col-lg-5 wrap-end"><a href="#">
+                <button class="view-form">MAKE AN INQUIRY  </button></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap-icon-info">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 col-lg-2 col-md-2 col-sm-4 box-disp"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="40px">
+<path fill-rule="evenodd"  fill="rgb(255, 115, 115)"
+ d="M25.982,0.000 L37.649,0.000 L39.600,12.000 L25.982,12.000 L25.982,0.000 ZM18.005,0.000 L21.994,0.000 L21.994,12.000 L18.005,12.000 L18.005,0.000 ZM25.982,26.084 L25.982,16.000 L40.002,16.000 L39.942,40.000 L0.057,40.000 L-0.009,16.000 L14.016,16.000 L14.016,26.084 L19.999,22.354 L25.982,26.084 ZM2.353,0.000 L14.016,0.000 L14.016,12.000 L0.384,12.000 L2.353,0.000 Z"/>
+</svg>
+              <p>Free Shipping in Europe</p>
+            </div>
+            <div class="col-4 col-lg-2 col-md-2 col-sm-4 box-disp"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="40px">
+<path fill-rule="evenodd"  fill="rgb(255, 115, 115)"
+ d="M31.999,26.002 C31.999,24.898 32.894,24.003 33.999,24.003 L39.999,24.003 L39.999,28.001 L33.999,28.001 C32.894,28.001 31.999,27.106 31.999,26.002 ZM40.000,40.001 L-0.000,40.001 L-0.000,12.013 L40.000,12.013 L40.000,20.010 L34.000,20.010 C30.686,20.010 28.000,22.695 28.000,26.007 C28.000,29.319 30.686,32.005 34.000,32.005 L40.000,32.005 L40.000,40.001 ZM12.440,0.739 C12.820,0.299 13.360,0.019 13.940,0.019 C14.540,-0.001 15.100,0.239 15.480,0.679 L20.100,5.796 L23.580,2.558 C24.360,1.818 25.580,1.838 26.340,2.578 L31.980,8.015 L6.500,8.015 L12.440,0.739 Z"/>
+</svg>
+              <p>Money Back Guarantee</p>
+            </div>
+            <div class="col-4 col-lg-2 col-md-2 col-sm-4 box-disp"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="40px">
+<path fill-rule="evenodd"  fill="rgb(255, 115, 115)"
+ d="M36.411,25.566 L33.618,22.755 C35.268,20.303 35.966,17.246 35.460,14.115 C34.653,9.117 30.616,5.117 25.641,4.387 C22.606,3.940 19.646,4.658 17.257,6.280 L14.459,3.464 C17.738,0.994 21.912,-0.154 26.206,0.474 C32.859,1.450 38.258,6.799 39.336,13.481 C40.051,17.908 38.921,22.204 36.411,25.566 ZM21.848,8.234 L25.775,8.234 L25.775,14.165 L29.702,14.165 L29.702,18.119 L21.848,18.119 L21.848,8.234 ZM15.711,15.907 L13.919,17.711 C13.915,18.315 14.598,20.379 17.099,22.897 C19.593,25.408 21.638,26.099 22.245,26.099 C22.246,26.099 22.247,26.099 22.249,26.099 L24.041,24.295 C25.575,22.751 28.061,22.751 29.595,24.295 L33.760,28.489 C35.294,30.033 35.294,32.536 33.760,34.080 L29.851,38.017 C28.591,39.285 26.862,39.892 24.843,39.892 C20.288,39.892 14.252,36.806 8.768,31.284 C0.853,23.316 -2.022,14.190 2.082,10.058 L5.991,6.121 C7.525,4.577 10.011,4.577 11.545,6.121 L15.711,10.315 C17.245,11.859 17.244,14.363 15.711,15.907 Z"/>
+</svg>
+              <p>24/7 Customer Support</p>
+            </div>
+            <div class="col-4 col-lg-2 col-md-2 col-sm-4 box-disp"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="40px">
+<path fill-rule="evenodd"  fill="rgb(255, 115, 115)"
+ d="M20.000,0.000 C8.972,0.000 0.000,8.972 0.000,20.000 C0.000,31.028 8.972,40.000 20.000,40.000 C31.028,40.000 40.000,31.028 40.000,20.000 C40.000,8.972 31.028,0.000 20.000,0.000 ZM20.000,18.000 C23.309,18.000 26.000,20.691 26.000,24.000 C26.000,26.604 24.323,28.803 22.000,29.632 L22.000,32.000 L18.000,32.000 L18.000,29.631 C15.677,28.803 14.000,26.604 14.000,24.000 L18.000,24.000 C18.000,25.103 18.898,26.000 20.000,26.000 C21.103,26.000 22.000,25.103 22.000,24.000 C22.000,22.898 21.103,22.000 20.000,22.000 C16.691,22.000 14.000,19.308 14.000,16.000 C14.000,13.396 15.677,11.197 18.000,10.369 L18.000,8.000 L22.000,8.000 L22.000,10.369 C24.323,11.197 26.000,13.396 26.000,16.000 L22.000,16.000 C22.000,14.898 21.103,14.000 20.000,14.000 C18.898,14.000 18.000,14.898 18.000,16.000 C18.000,17.103 18.898,18.000 20.000,18.000 Z"/>
+</svg>
+              <p>Lowest Prices Guaranteed</p>
+            </div>
+            <div class="col-4 col-lg-2 col-md-2 col-sm-4 box-disp"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="40px">
+<path fill-rule="evenodd"  fill="rgb(255, 115, 115)"
+ d="M22.000,40.000 L22.000,20.000 L40.000,20.000 L40.000,40.000 L22.000,40.000 ZM-0.000,8.000 L4.369,8.000 C4.145,7.371 4.000,6.705 4.000,6.000 C4.000,2.692 6.691,0.000 10.000,0.000 L14.000,0.000 C17.309,0.000 20.000,2.692 20.000,6.000 C20.000,2.692 22.691,0.000 26.000,0.000 L30.000,0.000 C33.309,0.000 36.000,2.692 36.000,6.000 C36.000,6.705 35.855,7.371 35.631,8.000 L40.000,8.000 L40.000,16.000 L-0.000,16.000 L-0.000,8.000 ZM24.000,8.000 L30.000,8.000 C31.103,8.000 32.000,7.103 32.000,6.000 C32.000,4.898 31.103,4.000 30.000,4.000 L26.000,4.000 C24.896,4.000 24.000,4.898 24.000,6.000 L24.000,8.000 ZM10.000,8.000 L16.000,8.000 L16.000,6.000 C16.000,4.898 15.103,4.000 14.000,4.000 L10.000,4.000 C8.896,4.000 8.000,4.898 8.000,6.000 C8.000,7.103 8.896,8.000 10.000,8.000 ZM18.000,40.000 L-0.000,40.000 L-0.000,20.000 L18.000,20.000 L18.000,40.000 Z"/>
+</svg>
+              <p>Exclusive Items for Sportshold</p>
+            </div>
+            <div class="col-4 col-lg-2 col-md-2 col-sm-4 box-disp"><svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="28px">
+<path fill-rule="evenodd"  fill="rgb(255, 115, 115)"
+ d="M33.631,24.000 C32.802,26.323 30.603,28.000 27.999,28.000 C25.395,28.000 23.196,26.323 22.368,24.000 L15.631,24.000 C14.802,26.323 12.603,28.000 9.999,28.000 C7.395,28.000 5.196,26.323 4.368,24.000 L0.000,24.000 L0.000,16.000 C0.000,12.691 2.691,10.000 6.000,10.000 C7.103,10.000 8.000,9.103 8.000,8.000 L8.000,6.000 C8.000,2.691 10.691,0.000 14.000,0.000 L15.999,0.000 L15.999,14.000 L40.000,14.000 L40.000,24.000 L33.631,24.000 ZM10.000,20.000 C8.897,20.000 8.000,20.898 8.000,22.000 L8.000,22.005 C8.003,23.105 8.898,24.000 9.999,24.000 C11.102,24.000 11.999,23.103 11.999,22.000 C11.999,20.898 11.102,20.000 10.000,20.000 ZM28.000,20.000 C26.897,20.000 26.000,20.898 26.000,22.000 L26.000,22.005 C26.003,23.105 26.898,24.000 27.999,24.000 C29.102,24.000 29.999,23.103 29.999,22.000 C29.999,20.898 29.102,20.000 28.000,20.000 ZM19.999,0.000 L40.000,0.000 L40.000,10.000 L19.999,10.000 L19.999,0.000 Z"/>
+</svg>
+              <p>5-Day Delivery in Europe</p>
+            </div>
+          </div>
+          <div class="row pg-t96">
+            <div class="col-12 col-md-12 col-lg-4 col-sm-12">
+              <div class="row">
+                <div class="col-12 col-lg-12 col-md-4 col-sm-4">
+                  <div class="wrap-icon"><i class="fas fa-2x fa-phone-volume"></i></div>
+                  <div class="wrap-icon-info__text">
+                    <h2>Call Us</h2>
+                    <p>0 (1234) 567 890</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-12 col-md-4 col-sm-4">
+                  <div class="wrap-icon"><i class="fas fa-2x fa-envelope"></i></div>
+                  <div class="wrap-icon-info__text">
+                    <h2>Email Us</h2>
+                    <p>hello@sportshold.com</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-12 col-md-4 col-sm-4">
+                  <div class="wrap-icon"><i class="fas fa-2x fa-map-marked-alt"></i></div>
+                  <div class="wrap-icon-info__text">
+                    <h2>Address</h2>
+                    <p>40 Baria Sreet 133/2, NY, US</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <div class="col-6 col-lg-2 col-md-3 col-sm-3 wrap-icon-info__text">
+                  <h2>navigation
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Brand</a></li>
+                      <li><a href="#">Last News</a></li>
+                      <li><a href="#">Riwer</a></li>
+                      <li><a href="#">About Us</a></li>
+                    </ul>
+                  </h2>
+                </div>
+                <div class="col-6 col-lg-2 col-md-3 col-sm-3 wrap-icon-info__text">
+                  <h2>categories
+                    <ul>
+                      <li><a href="#">Men</a></li>
+                      <li><a href="#">Women</a></li>
+                      <li><a href="#">Children</a></li>
+                      <li><a href="#">Sport</a></li>
+                      <li><a href="#">Hard</a></li>
+                    </ul>
+                  </h2>
+                </div>
+                <div class="col-6 col-lg-2 col-md-3 col-sm-3 wrap-icon-info__text">
+                  <h2>Sales
+                    <ul>
+                      <li><a href="#">New</a></li>
+                      <li><a href="#">Popular</a></li>
+                      <li><a href="#">Top</a></li>
+                    </ul>
+                  </h2>
+                </div>
+                <div class="col-6 col-lg-2 col-md-3 col-sm-3 wrap-icon-info__text">
+                  <h2>support
+                    <ul>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Info</a></li>
+                      <li><a href="#">Contacts</a></li>
+                      <li><a href="#">Return Policy</a></li>
+                    </ul>
+                  </h2>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-lg-4 col-md-4 col-sm-4 pg-l0 order-1 order-sm-1 order-md-1 order-lg-1"><img src="./img/logo.png"></div>
+          <div class="col-12 col-lg-5 col-md-5 col-sm-5 order-3 order-sm-2 order-md-2 order-lg-2">
+            <p class="footer__text">© 2017 Sportshold. All rights reserved.</p>
+          </div>
+          <div class="col-4 col-lg-3 col-md-3 col-sm-3 order-2 order-sm-3 order-md-3 order-lg-3">
+            <div class="row footer__social">
+              <div class="col-6 col-lg-2 col-md-6 col-sm-6"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+              <div class="col-6 col-lg-2 col-md-6 col-sm-6"><a href="#"><i class="fab fa-twitter"></i></a></div>
+              <div class="col-6 col-lg-2 col-md-6 col-sm-6"><a href="#"><i class="fab fa-youtube"></i></a></div>
+              <div class="col-6 col-lg-2 col-md-6 col-sm-6"><a href="#"><i class="fab fa-pinterest"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js", integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo", crossorigin="anonymous")-->
+    <script src="./js/libs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--script(src="./js/wow.min.js")-->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

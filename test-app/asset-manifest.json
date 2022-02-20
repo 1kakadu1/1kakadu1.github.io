@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f5b7591.css",
+    "main.js": "/static/js/main.369ee943.js",
+    "static/js/787.699bbe6a.chunk.js": "/static/js/787.699bbe6a.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf",
+    "index.html": "/index.html",
+    "main.5f5b7591.css.map": "/static/css/main.5f5b7591.css.map",
+    "main.369ee943.js.map": "/static/js/main.369ee943.js.map",
+    "787.699bbe6a.chunk.js.map": "/static/js/787.699bbe6a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f5b7591.css",
+    "static/js/main.369ee943.js"
+  ]
+}

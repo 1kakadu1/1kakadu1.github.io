@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <title>AM4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+  </head>
+  <body>
+    <div class="wrap-form">
+      <div class="close">X</div>
+      <div class="contact-info">
+        <h3> Заполните информацию и после проверки ссылка на статью будет добавлена.</h3>
+        <div class="logo-inf logo"><img class="phone" src="./img/logo.png" alt="logo"></div>
+      </div>
+      <form action="#" enctype="multipart/form-data" runat="server">
+        <div class="container">
+          <div class="column-left">
+            <label for="title">Название</label>
+            <input class="form-control" type="text" name="title" id="title" onclick="$(this).css('border-color','#ccc')">
+            <label for="go">Призыв</label>
+            <input class="form-control" type="text" name="go" id="go" onclick="$(this).css('border-color','#ccc')">
+            <label for="urlPost">Ссылка на статью</label>
+            <input class="form-control" type="text" name="urlPost" id="urlPost" onclick="$(this).css('border-color','#ccc')">
+            <label for="imgInp">Изображение поста (по возможности)</label>
+            <input class="form-control" type="file" name="img-pp" id="imgInp" onclick="$(this).css('border-color','#ccc')">
+            <div class="img-preview">Превью<img id="blah" src="./img/404.jpg" alt="your image"></div>
+          </div>
+          <div class="column-right">
+            <label for="opinion">Ваше мнение</label>
+            <textarea class="txt" rows="8" cols="45" name="text" id="opinion"></textarea>
+            <label for="exp">Краткий фрагмент текста</label>
+            <textarea class="txt" rows="9" cols="45" name="text" id="exp"></textarea>
+          </div>
+        </div>
+        <button class="btn" type="submit" name="btn" value="" id="send">Отправить</button>
+        <div id="error-msg">
+          <div class="prod-send"></div>
+          <div></div><span></span>
+        </div>
+      </form>
+    </div>
+    <script src="./js/preview.js"></script>
+  </body>
+</html>

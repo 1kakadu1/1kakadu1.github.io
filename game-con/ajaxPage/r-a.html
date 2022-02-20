@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <title>AM4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+  </head>
+  <body>
+    <div class="wrap-form">
+      <div class="close">X</div>
+      <div class="contact-info">
+        <div class="tab-btn">
+          <button class="btn active" type="submit" id="tab-log">Вход</button>
+          <button class="btn" type="submit" id="tab-reg">Регистрация</button>
+        </div>
+        <div class="logo-inf logo"><img class="phone" src="./img/logo.png" alt="logo"></div>
+      </div>
+      <div class="wrap-tab">
+        <div class="tab">
+          <form action="#">
+            <div class="container container_column">
+              <div class="column-left column-left_w100">
+                <label for="login">Логин</label>
+                <input class="form-control" type="text" name="login">
+                <label for="password">Пароль</label>
+                <input class="form-control" type="password" name="password">
+              </div>
+              <div class="icons-social"><a class="link_bg-red" href="google.com"><i class="fab fa-google-plus-g"></i></a><a class="link_bg-opblue" href="twitter.com"><i class="fab fa-twitter"></i></a><a class="link_bg-blue" href="facebook.com"><i class="fab fa-facebook-f"></i></a><a class="link_bg-pink" href="vk.com"><i class="fab fa-pinterest-p"></i></a><a class="link_bg-green" href="vk.com"><i class="fab fa-vk"></i></a></div>
+            </div>
+            <button class="btn" type="submit" name="in" value="" id="send-login">вход</button>
+          </form>
+        </div>
+        <div class="tab">
+          <form action="#">
+            <div class="container">
+              <div class="column-left">
+                <label for="name">Ваше имя</label>
+                <input class="form-control" type="text" name="name">
+                <label for="email">Ваш Email</label>
+                <input class="form-control" type="email" name="email">
+              </div>
+              <div class="column-right">
+                <label for="password">Пароль</label>
+                <input class="form-control" type="text" name="password">
+                <label for="login">Желаемый логин</label>
+                <input class="form-control" type="text" name="login">
+              </div>
+            </div>
+            <div class="icons-social"><a class="link_bg-red" href="google.com"><i class="fab fa-google-plus-g"></i></a><a class="link_bg-opblue" href="twitter.com"><i class="fab fa-twitter"></i></a><a class="link_bg-blue" href="facebook.com"><i class="fab fa-facebook-f"></i></a><a class="link_bg-pink" href="vk.com"><i class="fab fa-pinterest-p"></i></a><a class="link_bg-green" href="vk.com"><i class="fab fa-vk"></i></a></div>
+            <button class="btn" type="submit" name="reg" value="" id="send-register">Регистрация</button>
+          </form>
+        </div>
+        <div id="error-msg">
+          <div class="prod-send"></div>
+          <div></div><span></span>
+        </div>
+      </div>
+    </div>
+    <script src="./js/form-reg.js"></script>
+  </body>
+</html>

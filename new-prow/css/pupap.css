@@ -1,0 +1,296 @@
+
+.mymagicoverbox {
+  display:inline-block;
+  cursor:pointer;
+  font-weight:300;
+  font-family: "LatoRegular";
+}
+.mymagicoverbox_fenetre {
+  z-index:9999;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  text-align:center;
+  display:none;
+  transform: translate(-50%,-50%);
+  padding:0.31vw;
+  background-color:#ffffff;
+  color: #141413;
+  border-radius: 1vw;
+  font-style:normal;
+  font-size: 1.25vw;
+  font-weight:300;
+}
+.mymagicoverbox_fenetreinterieur {
+  text-align:center;
+  overflow:auto;
+  padding:0.32vw;
+  background-color:#ffffff;
+  color:#666666;
+  font-weight:400;
+  font-family:'Roboto';
+  font-size:1.06vw;
+  border-top:1px solid #e7e7e7;
+  margin-top:0.32vw
+}
+.mymagicoverbox_fermer {
+  color:#CB2025;
+  cursor:pointer;
+  font-weight:400;
+  font-size:0.87vw;
+  font-style:normal;
+  font-family:'Roboto';
+}
+#myfond_gris {
+  display: none;
+  background-color:#000000;
+  opacity:0.7;
+  width:100%;
+  height:100%;
+  z-index:9998;
+  position:fixed;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 26vw;
+    height: auto;
+}
+
+
+* {box-sizing: border-box;}
+.msg form, #mail_s form {
+  position: relative;
+  width: 31.37vw;
+  margin: 0 auto;
+}
+.msg button, #mail_s button {
+  border: none;
+  outline: none;
+  border-radius: 0.18vw;
+}
+
+.msg button, #mail_s button {
+    height: 2.8vw;
+    width: 9.18vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2px;
+    background: #6fc754;
+    border-radius: 5vw;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 1vw;
+    /* padding-right: 1vw; */
+}
+
+.msg button:after, #mail_s button:after {
+  content: "\f061";
+  font-family: FontAwesome;
+  color: #F9F0DA;
+  font-size: 1.25vw;
+  font-weight: bold;
+}
+
+/*****************************************************
+*** Customers ***
+*****************************************************/
+#customers {
+  padding: 7.5vw 0;
+  background: #ffffff;
+}
+
+#customers i {
+  color: #8c8f94;
+  font-size: 1.3vw;
+}
+
+#customers .star-rating {
+  margin-top: 1.06vw;
+}
+
+#customers .star-rating .gold-star {
+  color: #f2bc3b;
+}
+
+#customers .customer-name {
+  margin-top: 3.5vw;
+  font-size: 0.75vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #26272d;
+}
+
+#customers .testimonial {
+  padding-top: 10.87vw;
+}
+
+#customers .carousel-indicators {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  z-index: 5;
+  left: 0;
+  margin-left: 0;
+}
+
+#customers .carousel-indicators li {
+  width: 8.1vw;
+  height: 8.1vw;
+  border-radius: 0;
+  margin: 0;
+  border: none;
+  opacity: 0.2;
+  transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  transition: all 0.97s cubic-bezier(0.545, 0, 0.05, 1);
+}
+
+#customers .carousel-indicators li img {
+  position: relative;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  box-shadow: 0px 0.75vw 1.8vw 0px rgba(92, 95, 101, 0.18);
+}
+
+#customers .carousel-indicators li:first-child {
+  float: left;
+}
+
+#customers .carousel-indicators li:first-child img {
+  box-shadow: 10px 0.75vw 1.8vw 0px rgba(92, 95, 101, 0.18);
+}
+
+#customers .carousel-indicators li:last-child {
+  float: right;
+}
+
+#customers .carousel-indicators li:last-child img {
+  box-shadow: -10px 12px 30px 0px rgba(92, 95, 101, 0.18);
+}
+
+#customers .carousel-indicators li.active {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+#customers .carousel-control.left,
+#customers .carousel-control.right {
+  background: none;
+  width: 2.56vw;
+  height: 2.56vw;
+  top: 2.8vw;
+  line-height: 2.56vw;
+}
+
+#customers .carousel-control.left {
+  left: -6.25vw;
+}
+
+#customers .carousel-control.right {
+  right: -6.25vw;
+}
+
+/*****************************************************
+*** Кнопка ***
+*****************************************************/
+.col-sm-4 {
+margin-top: 1.2vw;
+margin-bottom: 4.8vw;
+}
+ 
+.icon {
+border:1px solid #d5d6d7;
+border-radius: 4.3vw;
+background-color: #f4f4f5;
+box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    width: 16.1vw;
+    height: 3.1vw;
+margin-right: 5vw;
+overflow: hidden;
+-webkit-transition: all .25s linear;
+-moz-transition: all .25s linear;
+-o-transition: all .25s linear;
+transition: all .25s linear;
+cursor: pointer;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.handle {
+    width: 7.3vw;
+    height: 2.75vw;
+border-radius: 4.3vw;
+position: absolute;
+top: 0.2vw;
+background: #FFF;
+box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0px 4px 23px 0 rgba(0, 0, 0, 0.08), -2px 4px 4px 0 rgba(0, 0, 0, 0.1);
+font-size: 1.25vw;
+line-height: 1.3vw;
+color: #6D808E;
+text-decoration: none;
+font-size: 2.75vw;
+color: #D8DAD9;
+line-height: 6.6vw;
+text-align: center;
+left: 0.31vw;
+-webkit-transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
+-moz-transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
+-o-transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
+transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
+}
+.icon .handle:before {
+-webkit-font-smoothing: antialiased;
+}
+.icon .handle:after {
+content: "Individual";
+font-size:1vw;
+font-weight: 400;
+color: #26292c;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* left: -110px; */
+    top: -2.5vw;
+}
+.icon.on {
+background: #267df4;
+}
+.icon.on .handle{
+left: 8.4vw;
+color: #267df4;
+z-index: 1;
+}
+
+.icon.on .handle:after {
+content: "Company";
+}
+
+.icon span
+{
+  position: relative;
+    left: 5.4vw;
+    top: 0.99vw;
+    color: #a1a2a4;
+    font-size: 1vw;
+}
+
+.icon span:nth-child(1)
+{
+  
+    left: 1.4vw; 
+}

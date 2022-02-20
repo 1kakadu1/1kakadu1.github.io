@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <title>AM4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+  </head>
+  <body>
+    <div class="wrap-form">
+      <div class="close">X</div>
+      <div class="contact-info">
+        <div class="tel">
+          <h3> Lorem ipsum dolor sit amet.</h3>
+        </div>
+        <div class="logo-inf logo"><img class="phone" src="./img/logo.png" alt="logo"></div>
+      </div>
+      <form action="#">
+        <div class="container">
+          <div class="column-left">
+            <label for="name">Ваше имя</label>
+            <input class="form-control" type="text" name="name" id="name" onclick="$(this).css('border-color','#ccc')">
+            <label for="email">Ваш Email</label>
+            <input class="form-control" type="email" name="email" id="email" onclick="$(this).css('border-color','#ccc')">
+            <label for="phone">Ваш телефон</label>
+            <input class="form-control" type="tel" name="tel" id="phone" onclick="$(this).css('border-color','#ccc')">
+          </div>
+          <div class="column-right">
+            <label for="msg">Сообщение(.....)</label>
+            <textarea class="txt" rows="8" cols="45" name="text" id="msg"></textarea>
+          </div>
+        </div>
+        <button class="btn" type="submit" name="btn" value="" id="send">Отправить</button>
+        <div id="error-msg">
+          <div class="prod-send"></div>
+          <div></div><span></span>
+        </div>
+      </form>
+    </div>
+    <script src="./js/send-msg.js"></script>
+  </body>
+</html>

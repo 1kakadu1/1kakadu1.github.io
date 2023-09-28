@@ -1,4 +1,80 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Video test</title><script defer="defer" src="bundle-6e8635ae417291881a31.js"></script><link href="style-6e8635ae417291881a31.css" rel="stylesheet"></head><body><div class="video-list"><div class="video-player-wrap player-container video-2" data-name="video-2"><video poster="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/images%2Fposters%2F1.png?alt=media&token=0609d83b-e09d-42b8-9efa-380a185aed4d" class="player-video" preload="none" data-quality="[
-            {'quality': '480', url: 'https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2FThe%20Path%20of%20the%20Rebel%20(2).mp4?alt=media&token=f83a2eec-2c96-4284-a00c-6ab6c326cb6a'}, 
-            {'quality': '', url: ''}
-          ]" src="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2FThe%20Path%20of%20the%20Rebel%20(2).mp4?alt=media&token=f83a2eec-2c96-4284-a00c-6ab6c326cb6a"></video></div><div class="video-player-wrap player-container video-1" data-name="video-1"><video poster="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/images%2Fposters%2FScreenshot_7.png?alt=media&token=974b854d-d4a3-4253-bb5d-4081003da00c" class="player-video" preload="none"><source src="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2Fvideoplayback.mp4?alt=media&token=26b29151-5a99-4adb-bbfe-f2abfd717bd9" type="video/mp4" lang="ru" label="480p" res="480" selected="true"><track kind="subtitles" src="./assets/text/v1.ru.vtt" srclang="ru" lang="ru" label="Russian"><track kind="subtitles" src="./assets/text/v1.en.vtt" srclang="en" lang="en" label="English"></video></div><div class="video-player-wrap player-container video-3" data-name="video-3"><video poster="" class="player-video" preload="none"><source src="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2FVIOLENCE.mp4?alt=media&token=6c2758a1-c6e3-4a12-b537-29c86082f45e" type="video/mp4" lang="ru" label="480p" res="480" selected="true"></video></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video player mini</title>
+<script defer src="video_mini.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body>
+    <div class="video-list">
+
+        <div class="video-player-wrap player-container video-2" data-name="video-2">
+            <video
+                poster="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/images%2Fposters%2F1.png?alt=media&token=0609d83b-e09d-42b8-9efa-380a185aed4d"
+                class="player-video" preload="none">
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2FThe%20Path%20of%20the%20Rebel%20(2).mp4?alt=media&token=f83a2eec-2c96-4284-a00c-6ab6c326cb6a"
+                    type="video/mp4" lang="ru" label="480p" res="480" selected="true">
+            </video>
+        </div>
+
+        <div class="video-player-wrap player-container video-1" data-name="video-1">
+            <video
+                poster="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/images%2Fposters%2FScreenshot_7.png?alt=media&token=974b854d-d4a3-4253-bb5d-4081003da00c"
+                class="player-video" preload="none">
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2Fvideoplayback.mp4?alt=media&token=26b29151-5a99-4adb-bbfe-f2abfd717bd9"
+                    type="video/mp4" lang="ru" label="480p" res="480" selected="true">
+                <track kind="subtitles" src="./public/text/v1.ua.vtt" srclang="ua" lang="ua" label="Ukrainian">
+                <track kind="subtitles" src="./public/text/v1.ru.vtt" srclang="ru" lang="ru" label="Russian">
+                <track kind="subtitles" src="./public/text/v1.en.vtt" srclang="en" lang="en" label="English">
+            </video>
+        </div>
+
+        <div class="video-player-wrap player-container video-3" data-name="video-3">
+            <video poster="" class="player-video" preload="none">
+                <source
+                    src="https://firebasestorage.googleapis.com/v0/b/product-shop-b3677.appspot.com/o/video%2FVIOLENCE.mp4?alt=media&token=6c2758a1-c6e3-4a12-b537-29c86082f45e"
+                    type="video/mp4" lang="ru" label="480p" res="480" selected="true">
+            </video>
+        </div>
+
+    </div>
+
+</body>
+<script src="./video_mini.js"></script>
+<script>
+
+const{  VideoPlayer, VideoUtils} = window['video_mini'];
+
+const videoStack = {};
+const videoList = document.querySelectorAll(".video-list .player-container");
+const utils = new VideoUtils();
+
+videoList.forEach((item)=>{
+
+  const videoSubtitles = item.querySelectorAll("video track"); 
+  const videoPlayer = new VideoPlayer({
+    videoContainer: `.${item.dataset.name}`,
+    iconsFolder: './public/images/icons',
+    volumeValue: 1,
+    subtitle: !!videoSubtitles.length,
+    timeTrackOffset: 2
+  });
+
+  videoPlayer.playerInit();
+  videoStack[item.dataset.name || "unknown"]= videoPlayer;
+
+});
+// Pause a video if another video is running
+utils.eventChangeStor(function(e){
+  const info = localStorage.getItem(utils.storeKey);
+  if(info && e.detail !== info){
+    const data = JSON.parse(info)
+    videoStack[data.name].pause();
+  }
+})
+</script>
+</html>
